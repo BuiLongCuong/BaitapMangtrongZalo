@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Cho một mảng [1,7,5,9,2,6]</h1>
+<b>1.In ra các phần tử trong mảng:</b>
+<br>
+<button onclick="bai1()">In</button>
+<br>
+<script>
+    let mang =[1,7,5,9,2,6];
+    function bai1() {
+
+        for (let i = 0; i < mang.length ; i++) {
+            document.write(`Phần tử thứ ${i} có giá trị là: ${mang[i]} <br>`)
+        }
+    }
+</script>
+<b>2.In ra các phần tử chẵn trong mảng:</b>
+<br>
+<button onclick="bai2()">In</button>
+<script>
+    // let mang =[1,7,5,9,2,6];
+    function bai2() {
+        for (let i = 0; i < mang.length; i++) {
+            if(mang[i]%2===0){
+                document.write(`Phần tử ${mang[i]} là số chẵn<br>`)
+            }
+        }
+    }
+</script>
+<br>
+<b>3.In ra các phần tử tại vị trí chẵn trong mảng:</b>
+<br>
+<button onclick="bai3()">In</button>
+<br>
+<script>
+    // let mang =[1,7,5,9,2,6];
+function bai3() {
+    for (let i = 0; i < mang.length; i++) {
+        if(mang[i]%2===0){
+            document.write(`Phần tử thứ ${i} là số chẵn<br>`)
+        }
+    }
+}
+</script>
+<b>4.In ra tổng các phần tử chẵn trong mảng:</b>
+<br>
+<button onclick="bai4()">In</button>
+<script>
+    // let mang =[1,7,5,9,2,6];
+    let luutru=0;
+function bai4() {
+    for (let i = 0; i < mang.length; i++) {
+        if(mang[i]%2===0){
+            luutru+=mang[i];
+        }
+    }
+    document.write(luutru)
+}
+</script>
+<br>
+<b>5.In ra tổng các phần tử lớn hơn 5 trong mảng:</b>
+<br>
+<button onclick="bai5()">In</button>
+<script>
+    // let mang =[1,7,5,9,2,6];
+    let luu=0;
+    function bai5() {
+        for (let i = 0; i < mang.length; i++) {
+            if(mang[i]>5){
+                luutru+=mang[i]
+            }
+        }
+        document.write(luutru)
+    }
+</script>
+<br>
+<b>6.In ra tổng các phần tử chia 7 dư 2 trong mảng:</b>
+<br>
+<button onclick="bai6()">In</button>
+<script>
+    // let mang =[1,7,5,9,2,6];
+    let data=0;
+    function bai6() {
+        for (let i = 0; i < mang.length; i++) {
+            if(mang[i]%7===2){
+                data+=mang[i];
+            }
+        }
+        document.write(data)
+    }
+</script>
+<br>
+<b>7.In ra max của mảng:</b>
+<br>
+<button onclick="bai7()">In</button>
+<script>
+    // let mang =[1,7,5,9,2,6];
+    let max = mang[0];
+    function bai7() {
+        for (let i = 0; i <mang.length ; i++) {
+            if(mang[i]>max){
+                max=mang[i]
+            }
+        }
+        document.write(max)
+    }
+</script>
+<br>
+<b>8.In ra max của các phần tử chẵn trong mảng</b>
+<br>
+<button onclick="bai8()">In</button>
+<script>
+    // let mang =[1,7,5,9,2,6];
+    let mangsochan=[];
+    function bai8() {
+        for (let i = 0; i < mang.length; i++) {
+            if(mang[i]%2===0){
+                mangsochan.push(mang[i])
+            }
+        }
+        let max= mangsochan[0]
+        for (let j = 0; j <mangsochan.length ; j++) {
+            if(mangsochan[j]>max){
+               max=mangsochan[j]
+            }
+        } document.write(`Max của các phần tử chẵn trong mảng là: ${max}`)
+    }
+</script>
+<br>
+<b>9.In ra min của mảng</b>
+<br>
+<button onclick="bai9()">In</button>
+<script>
+    // let mang =[1,7,5,9,2,6];
+let min =mang[0]
+    function bai9() {
+        for (let i = 0; i < mang.length; i++) {
+            if(mang[i]<min){
+                min=mang[i];
+            }
+        }
+        document.write(min)
+    }
+</script>
+<br>
+<b>10.In ra số lượng các phần tử chia hết cho 5 trong mảng</b>
+<br>
+<button onclick="bai10()">In</button>
+<script>
+    // let mang =[1,7,5,9,2,6];
+    let soluong=0;
+    function bai10() {
+        for (let i = 0; i < mang.length; i++) {
+            if(mang[i]%5===0){
+                soluong+=1
+            }
+        }
+        document.write(soluong)
+    }
+</script>
+<br>
+<b>11.In ra trung bình các phần tử chia hết cho 5 trong mảng</b>
+<br>
+<button onclick="bai11()">In</button>
+<script>
+    let manga =[1,7,5,9,10,15,20,2,6];
+    let bot=0;
+    let avg;
+    let count=0;
+    function bai11() {
+        for (let i = 0; i < manga.length; i++) {
+            if(manga[i]%5===0){
+                bot+=manga[i];
+                count+=1;
+            }
+        }
+        document.write(avg=bot/count)
+    }
+</script>
+</body>
+</html>
